@@ -37,9 +37,20 @@ COLUMNS:
 
   ### Compiling, Training, and Evaluating the Model
 
-  A series of attempts were made to try to get the model up to 75%. The following describes the intent made:
+A series of attempts were made to try to get the model up to 75%. The following describes the intent made:
 
-  
+- First, an attempt was made to change the neurons values, add hidden layers, and change activation functions. The neuron value was increased to 100 units for layer one, which resulted in a model accuracy of. 
+
+- Next, hidden layers with neuron units = 10 were added, and the `relu` was used as the activation function. The accuracy looks about the same at .
+
+- The following attempt changed the activation function of the hidden layers that provided minimal improvement. The accuracy is now at . 
+
+- The last attempt set the first hidden layers with units = 6, and activation funcions as `tanh`. The second hidden layer were set at units = 6, and the activation functions as `relu`. The third hidden layer with units = 3, and activation functions as `relu`. The accuracy and loss improved marginally and remains at .
+
+## Summary
+
+
+
 
 
 
