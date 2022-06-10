@@ -35,19 +35,29 @@ COLUMNS:
 
   - Removed the catergorical variable lists that dtype = objects. Objects variable are neither targets nor features. For future models, consider removing STATUS, SPECIAL CONSIDERATIONS, and ASk_AMT as the data suggests they do not overall improve the network.
 
-  ### Compiling, Training, and Evaluating the Model
+### Compiling, Training, and Evaluating the Model
 
 A series of attempts were made to try to get the model up to 75%. The following describes the intent made:
 
-- First, an attempt was made to change the neurons values, add hidden layers, and change activation functions. The neuron value was increased to 100 units for layer one, which resulted in a model accuracy of. 
+- First, an attempt was made to change the neurons values, add hidden layers, and change activation functions. The neuron value was increased to 100 units for layer one, which resulted in a model accuracy of 72.66%. 
 
-- Next, hidden layers with neuron units = 10 were added, and the `relu` was used as the activation function. The accuracy looks about the same at .
+    ![Attempt_0](./Resources/Attempt0.PNG)
 
-- The following attempt changed the activation function of the hidden layers that provided minimal improvement. The accuracy is now at . 
+- Next, hidden layers with neuron units = 10 were added, and the `relu` was used as the activation function. The accuracy looks about the same at 72.66%.
 
-- The last attempt set the first hidden layers with units = 6, and activation funcions as `tanh`. The second hidden layer were set at units = 6, and the activation functions as `relu`. The third hidden layer with units = 3, and activation functions as `relu`. The accuracy and loss improved marginally and remains at .
+    ![Attempt_1](./Resources/Attempt1.PNG)
+
+- The following attempt changed the activation function of the hidden layers that provided minimal improvement. The accuracy is now at 72.45%. 
+
+    ![Attempt_2](./Resources/Attempt2.PNG)
+
+- The last attempt set the first hidden layers with units = 6, and activation funcions as `tanh`. The second hidden layer were set at units = 6, and the activation functions as `relu`. The third hidden layer with units = 3, and activation functions as `relu`. The accuracy and loss barely improved marginally and remains at 72.50%.
+
+    ![Attempt_3](./Resources/Attempt3.PNG)
 
 ## Summary
+
+The model attempts failed to increase the predictive accuarcy over 75%. For future analysis, other models such as Balanced Random Forest Classifer, and Easy Ensemble Classifier could be utilized for a better result. Additionally, it may be useful to eliminate other categories that do not contribute as much to the network analysis such as the "classification". These categories should be assessed from a logical perspective rather than a numerical one.
 
 
 
